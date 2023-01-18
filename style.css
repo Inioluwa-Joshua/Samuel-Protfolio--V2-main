@@ -59,6 +59,7 @@ p{
     background-color: transparent;
     border: 2px solid crimson;
     font-size: 2rem;
+    font-family: initial;
     text-transform: uppercase;
     letter-spacing: .1rem;
     margin-top: 30px;
@@ -66,8 +67,9 @@ p{
     transition-property: background-color, color;
 }
 .cta:hover{
-    color: white;
+    color: #ffffff;
     background-color: crimson;
+    text-decoration: none;
 
 }
 .brand a h1{
@@ -225,7 +227,7 @@ p{
     left: 0;
     top: 0;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     background-color: black;
     opacity: .7;
     z-index: -1;
@@ -450,6 +452,9 @@ p{
     letter-spacing: .2rem;
     margin-bottom: 10px;
 }
+#about .col-right .about_contact{
+    font-size: 1.4rem;
+}
 #about .col-right p {
     margin-bottom: 20px;
 }
@@ -458,6 +463,14 @@ p{
     margin:0 0 50px 10px;
     padding: 5px 10px;
     font-size: 1rem;
+    border-radius: 2rem;
+    transition: .9s;
+}
+
+#about .col-right .cta:hover{
+    color: #fff;
+    border-color: red;
+    background: red;
 }
 #about .col-left .about-img{
     height: 100%;
@@ -475,6 +488,9 @@ p{
     width: 98%;
     border: 7px solid crimson;
     z-index: -1;
+}
+#about .col-right div .cta{
+    display: block;
 }
 /* End About Section */
 
@@ -598,8 +614,27 @@ p{
     }
 /* End Keyframes */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px){
+    
     .cta {
         font-size: 2.5rem;
         padding: 10px 50px;
@@ -647,6 +682,16 @@ p{
     /* End Project */
     
     /* About */
+    #about .col-right .about_contact{
+        margin-left: 10rem;
+    }
+    #about .col-right .cv_container{
+        margin-top: 40px;
+        display: block;
+    }
+    #about .col-right .cv_container .cta{
+        display: inline;
+    }
     #about .about{
         flex-direction: row;
     }
@@ -673,6 +718,7 @@ p{
     #about .col-right h1 {
         text-align: left;
     } 
+    
     /* End About */
 
     /* Contact */
@@ -735,7 +781,7 @@ p{
         display: none;
     }
     #header .nav-bar{
-        padding: 0;
+        padding: 0 20px;
     }
 /* end header */
     #services .service-bottom .service-items{
